@@ -50,8 +50,8 @@ const LandingPage = () => {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 p-6">
       {/* Top Heading */}
-      <h1 className="text-3xl md:text-4xl font-bold mb-8 text-gray-800 text-center">
-        Welcome to Marsh Edu Portal
+      <h1 className="text-3xl md:text-6xl tracking-wide font-bold mb-8 text-gray-800 text-center">
+        Welcome to <span className="text-blue-600">Marsh</span> Edu Portal
       </h1>
 
       {/* Main Container */}
@@ -67,7 +67,7 @@ const LandingPage = () => {
 
         {/* Right Section with Login */}
         <div className="w-full md:w-1/2 flex items-center justify-center p-6">
-          <div className="bg-white p-8 rounded-2xl shadow-2xl w-full sm:w-[90%] md:w-[100%] lg:w-full mx-auto">
+          <div className="bg-white text-gray-500 p-8 rounded-2xl shadow-2xl w-full sm:w-[90%] md:w-[100%] lg:w-full mx-auto">
             {/* Tabs for Roles */}
             <div className="flex flex-wrap justify-center gap-2 border-b mb-6 lg:flex-nowrap">
               {roles.map((r) => (
@@ -176,16 +176,7 @@ const LandingPage = () => {
               </button>
             </form>
 
-            {/* Signup Link */}
-            <p className="mt-6 text-center text-gray-600">
-              Don't have an account?{" "}
-              <a
-                href="#"
-                className="text-blue-600 font-semibold hover:underline"
-              >
-                Signup
-              </a>
-            </p>
+            
           </div>
         </div>
       </div>
