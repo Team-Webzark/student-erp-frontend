@@ -59,7 +59,7 @@ const LandingPage = () => {
         {/* Left Section with Image */}
         <div className="w-1/2 hidden md:flex items-center justify-center p-6">
           <img
-            src="/images/collegelogin.jpg"
+            src="/images/collegelogin2.png"
             className="max-h-80 object-contain"
             alt="College Login"
           />

@@ -185,7 +185,7 @@ const StudentDashboard = () => {
             )}
 
             {activeTab === "exam info" && (
-              <div className="flex flex-col gap-3 mt-6">
+              <div className="w-[30vw] flex flex-col gap-3 mt-6">
                 <button className="px-4 py-2 bg-blue-500 text-white rounded-lg shadow hover:bg-blue-600 transition">
                   Download Syllabus
                 </button>
@@ -268,7 +268,7 @@ const StudentDashboard = () => {
               <img
                 src={studentInfo.photo}
                 alt="Profile"
-                className="w-32 h-32 rounded-xl object-cover border-2 border-blue-200 shadow-md hover:scale-105 transition"
+                className="w-[20vw] h-[15vw] rounded-xl object-cover border-2 border-blue-200 shadow-md hover:scale-105 transition"
               />
               <button
                 onClick={() => downloadInfo(studentInfo, "student-info.json")}
