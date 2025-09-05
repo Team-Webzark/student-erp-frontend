@@ -4,7 +4,7 @@
 import dynamic from "next/dynamic";
 
 const TeacherDashboard = dynamic(
-  () => import("@/components/teacher/TeacherDashboard"),
+  () => import("@/components/teacher-dashboard/TeacherDashboard"),
   { ssr: false }
 );
 

@@ -123,3 +123,16 @@ body *:where(:not(style)) {
   }
 }
 
+/* NProgress bar style */
+#nprogress .bar {
+  background: #2563eb !important; /* Tailwind blue-600 */
+  height: 3px !important;
+}
+
+#nprogress .peg {
+  box-shadow: 0 0 10px #2563eb, 0 0 5px #2563eb;
+}
+
+#nprogress .spinner {
+  display: none !important; /* hide spinner if not needed */
+}

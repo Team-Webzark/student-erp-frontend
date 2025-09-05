@@ -137,6 +137,24 @@ export function getFeeSummary(classId) {
   return Promise.resolve({ totalDue, totalPaid, defaulters, totalStudents: students.length });
 }
 
+// 🔥 NEW: Full fee details table data
+export function getFeeDetails(classId) {
+  const students = _read(LS_KEYS.STUDENTS, defaultStudents).filter((s) => !classId || s.class === classId);
+  return Promise.resolve(
+    students.map((s) => ({
+      id: s.id,
+      roll: s.roll,
+      name: s.name,
+      class: s.class,
+      hostelAllocated: s.hostelAllocated,
+      phone: s.phone,
+      feePaid: s.fee?.paid || 0,
+      feeDue: s.fee?.due || 0,
+      totalFee: (s.fee?.paid || 0) + (s.fee?.due || 0),
+    }))
+  );
+}
+
 export function getConfig() {
   return Promise.resolve(_read(LS_KEYS.CONFIG, defaultConfig));
 }

@@ -11,16 +11,8 @@ export default function ClassOverviewCard({ stats }) {
         <div className="text-2xl font-bold">{stats.totalStudents}</div>
       </div>
       <div className="p-4 bg-white rounded-lg shadow">
-        <div className="text-sm text-gray-500">Hostel Allotted</div>
-        <div className="text-2xl font-bold">{stats.hostelCount}</div>
-      </div>
-      <div className="p-4 bg-white rounded-lg shadow">
         <div className="text-sm text-gray-500">Pending Leaves</div>
         <div className="text-2xl font-bold">{stats.pendingLeaves}</div>
-      </div>
-      <div className="p-4 bg-white rounded-lg shadow">
-        <div className="text-sm text-gray-500">Fee Due (₹)</div>
-        <div className="text-2xl font-bold">₹{stats.totalDue}</div>
       </div>
     </div>
   );

@@ -89,24 +89,6 @@ export default function TeacherDashboard() {
           <div className="bg-white rounded-xl p-4 shadow">
             {teacher && <TeacherHeader teacher={teacher} />}
             <hr className="my-4" />
-            <div className="space-y-2 text-sm">
-              <div>
-                Total Students:{" "}
-                <span className="font-semibold">{stats.totalStudents}</span>
-              </div>
-              <div>
-                Hostel:{" "}
-                <span className="font-semibold">{stats.hostelCount}</span>
-              </div>
-              <div>
-                Pending Leaves:{" "}
-                <span className="font-semibold">{stats.pendingLeaves}</span>
-              </div>
-              <div>
-                Fee Due:{" "}
-                <span className="font-semibold">₹{stats.totalDue}</span>
-              </div>
-            </div>
             <div className="mt-4 space-y-2">
               <button
                 onClick={async () => {
@@ -116,14 +98,6 @@ export default function TeacherDashboard() {
                 className="w-full py-2 bg-blue-600 text-white rounded"
               >
                 Refresh
-              </button>
-              <button
-                onClick={() => {
-                  navigator.clipboard?.writeText(window.location.href);
-                }}
-                className="w-full py-2 bg-gray-100 rounded"
-              >
-                Copy Link
               </button>
             </div>
           </div>
@@ -138,7 +112,7 @@ export default function TeacherDashboard() {
         <main className="w-full lg:col-span-9 space-y-6">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
             <h2 className="text-xl sm:text-2xl font-bold">
-              Class Overview - {teacher?.classes?.[0]}
+              Class - {teacher?.classes?.[0]}
             </h2>
 
             <div className="flex flex-wrap gap-2">
