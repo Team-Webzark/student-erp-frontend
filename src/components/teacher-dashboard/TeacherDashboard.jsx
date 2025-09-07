@@ -116,7 +116,7 @@ export default function TeacherDashboard() {
             </h2>
 
             <div className="flex flex-wrap gap-2">
-              {["overview", "students", "leave", "exams"].map((tab) => (
+              {["overview", "students", "leave", "exams", "applications"].map((tab) => (
                 <button
                   key={tab}
                   className={`px-3 py-2 rounded text-sm sm:text-base ${
@@ -161,6 +161,14 @@ export default function TeacherDashboard() {
           {activeTab === "exams" && (
             <section className="bg-white p-4 sm:p-6 rounded-xl shadow">
               <ExamTracker exams={exams} />
+            </section>
+          )}
+
+          {activeTab === "applications" && (
+            <section className="bg-white p-4 sm:p-6 rounded-xl shadow">
+              <h3 className="text-lg font-semibold mb-2">Applications</h3>
+              <p className="text-gray-600">Applications section coming soon!</p>
+              {/* You can replace this with an <ApplicationsPanel /> component */}
             </section>
           )}
         </main>

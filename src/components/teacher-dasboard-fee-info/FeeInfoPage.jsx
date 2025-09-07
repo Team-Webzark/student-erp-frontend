@@ -20,7 +20,17 @@ export default function FeeInfoPage() {
   return (
     <div className="min-h-screen bg-gray-50 p-6 text-gray-800">
       <div className="max-w-6xl mx-auto bg-white p-6 rounded-xl shadow space-y-6">
-        <h2 className="text-2xl font-bold">Complete Fee Information</h2>
+<div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+  <h2 className="text-2xl font-bold">Complete Fee Information</h2>
+  <button
+    onClick={() => history.back()}
+    className="py-2 px-4 bg-gray-200 rounded hover:bg-gray-300 transition w-max"
+  >
+    ← Back
+  </button>
+</div>
+
+
 
         {/* Summary Section */}
         <div className="grid grid-cols-2 gap-4">
@@ -37,12 +47,6 @@ export default function FeeInfoPage() {
         {/* Table Section */}
         <FeeTable students={feeSummary.students} />
 
-        <button
-          onClick={() => history.back()}
-          className="py-2 px-4 bg-gray-200 rounded hover:bg-gray-300 transition"
-        >
-          ← Back
-        </button>
       </div>
     </div>
   );
